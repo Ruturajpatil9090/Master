@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
+import GroupMasterDetail from "./components/GroupMaster/GroupMasterDetail";
+import GroupMasterForm from "./components/GroupMaster/GroupMasterForm";
+//import SimpleForm from "./components/GroupMaster/SimpleForm";
+import {Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    
+        <Routes>
+          <Route path="/" Component={GroupMasterDetail} />
+          <Route path="/add" Component={GroupMasterForm} />
+          {/* <Route path="/add" Component={SimpleForm} /> */}
+        </Routes>
+      
+    </>
   );
 }
 
